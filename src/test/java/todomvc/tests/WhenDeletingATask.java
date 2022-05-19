@@ -1,31 +1,12 @@
-package todomvc;
+package todomvc.tests;
 
 import net.serenitybdd.core.Serenity;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-import todomvc.actions.ToDosForm;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SerenityRunner.class)
-public class WhenDeletingATask {
+public class WhenDeletingATask extends ToDoListConfClass{
 
-    @Managed(driver = "chrome")
-    WebDriver driver;
-
-    @Steps
-    ToDosForm toDosForm;
-
-    @Before
-    public void openPage() {
-        toDosForm.openToDoList();
-    }
 
     // TODO: Exercise 5
     @Test

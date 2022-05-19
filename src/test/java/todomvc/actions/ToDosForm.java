@@ -54,7 +54,15 @@ public class ToDosForm extends UIInteractionSteps {
     }
 
 
+    @Step("Enter the following tasks: {0}")
     public void enterTasks(String[] tasks) {
+        for(String task : tasks) {
+            enterTaskWithName(task);
+        }
+    }
+
+    @Step("Enter the following tasks: {0}")
+    public void enterTasks(List<String> tasks) {
         for(String task : tasks) {
             enterTaskWithName(task);
         }

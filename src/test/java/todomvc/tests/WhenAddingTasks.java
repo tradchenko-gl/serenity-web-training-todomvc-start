@@ -1,31 +1,12 @@
-package todomvc;
+package todomvc.tests;
 
 import net.serenitybdd.core.Serenity;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
-import net.thucydides.junit.annotations.UseTestDataFrom;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import todomvc.actions.ToDosForm;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SerenityRunner.class)
-//UseTestDataFrom("test-data/toDoTasks.csv")
-public class WhenAddingTasks {
+public class WhenAddingTasks extends ToDoListConfClass {
 
-    @Managed(driver = "chrome")
-    WebDriver driver;
-
-    @Steps
-    ToDosForm toDosForm;
-
-    @Before
-    public void openPage() {
-        toDosForm.openToDoList();
-    }
     // TODO: Exercise 1
     @Test
     public void addingASingleTask() {
